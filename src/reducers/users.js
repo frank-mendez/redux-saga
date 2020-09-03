@@ -7,8 +7,9 @@ const INITIAL_STATE = {
 export default function users(state = INITIAL_STATE, action) {
   switch (action.type) {
     case Types.GET_USERS_REQUEST:
+      alert(action.type);
       return {
-        items: action.payload.items,
+        items: action.payload,
       };
     default:
       return state;
